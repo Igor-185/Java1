@@ -4,7 +4,9 @@ public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit) {
         int i = 0;
         boolean result = false;
-        while (number != 0) {
+        if (number == 0 && digit == 0)
+            result = true;
+        else while (number > 0) {
             if (digit == number % 10)
                 result = true;
             i++;
@@ -45,6 +47,7 @@ public class CyclesGoldenFibo {
     }
 
     public static void main(String[] args) {
+
         int n = 1;
         while (n <= 15) {
             System.out.println(fiboNumber(n));
