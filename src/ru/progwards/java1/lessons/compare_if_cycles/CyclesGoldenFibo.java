@@ -31,29 +31,27 @@ public class CyclesGoldenFibo {
         Double doub1 = (double) a;
         Double doub2 = (double) b;
         Double doub3 = (double) c;
-        double const1 = 1.61703;
-        double const2 = 1.61903;
+        final double MIN = 1.61703;
+        final double MAX = 1.61903;
         if (a == b) {
-            if (doub1 / doub3 > const1 && doub1 / doub3 < const2)
+            if (doub1 / doub3 > MIN && doub1 / doub3 < MAX)
                 result = true;
         } else if (a == c) {
-            if (doub1 / doub2 > const1 && doub1 / doub2 < const2)
+            if (doub1 / doub2 > MIN && doub1 / doub2 < MAX)
                 result = true;
         } else if (b == c) {
-            if (doub2 / doub1 > const1 && doub2 / doub1 < const2)
+            if (doub2 / doub1 > MIN && doub2 / doub1 < MAX)
                 result = true;
         }
         return result;
     }
 
     public static void main(String[] args) {
-
         int n = 1;
         while (n <= 15) {
             System.out.println(fiboNumber(n));
             n++;
         }
-
         for (int b = 1; b <= 100; b++)
             for (int a = 1; a <= 100; a++)
                 if (isGoldenTriangle(b, b, a))
