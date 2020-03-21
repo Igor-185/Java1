@@ -2,24 +2,24 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 
 public class TriangleSimpleInfo {
     public static int maxSide(int a, int b, int c) {
-        int i;
-        if (a > b & a > c) {
-            i = a;
-        } else if (b > a & b > c) {
+        int i = a;
+        if (b > a) {
             i = b;
-        } else
+            if (c > b)
+                i = c;
+        } else if (c > a)
             i = c;
         System.out.println("max = " + i);
         return i;
     }
 
     public static int minSide(int a, int b, int c) {
-        int i;
-        if (a < b & a < c) {
-            i = a;
-        } else if (b < a & b < c) {
+        int i = a;
+        if (b < a) {
             i = b;
-        } else
+            if (c < b)
+                i = c;
+        } else if (c < a)
             i = c;
         System.out.println("min = " + i);
         return i;
@@ -34,9 +34,9 @@ public class TriangleSimpleInfo {
     }
 
     public static void main(String[] args) {
-        maxSide(8, 10, 10);
-        minSide(4, 3, 3);
-        isEquilateralTriangle(41, 4, 24);
-        isEquilateralTriangle(64, 64, 64);
+        // maxSide(18, 10, 11);
+        minSide(12, 4, 3);
+        // isEquilateralTriangle(41, 4, 24);
+        // isEquilateralTriangle(64, 64, 64);
     }
- }
+}
