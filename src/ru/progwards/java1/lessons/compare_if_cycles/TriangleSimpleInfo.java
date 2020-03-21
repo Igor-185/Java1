@@ -34,9 +34,9 @@ public class TriangleSimpleInfo {
     }
 
     public static void main(String[] args) {
-        // maxSide(18, 10, 11);
+        maxSide(18, 10, 11);
         minSide(12, 4, 3);
-        // isEquilateralTriangle(41, 4, 24);
-        // isEquilateralTriangle(64, 64, 64);
+        isEquilateralTriangle(41, 4, 24);
+        isEquilateralTriangle(64, 64, 64);
     }
 }
